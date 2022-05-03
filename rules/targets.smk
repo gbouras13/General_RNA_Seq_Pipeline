@@ -19,7 +19,7 @@ if ReadLength == 150:
         os.path.join(RESULTS,"geneCounts_150.txt")
     ]
 else:
- AlignFiles = os.path.join(LOGS, "star_200_align.txt")
+    AlignFiles = os.path.join(LOGS, "star_200_align.txt")
     FeatureCountFiles = [
         os.path.join(RESULTS,"geneCounts_200.out"),
         os.path.join(RESULTS,"geneCounts_200.txt")
