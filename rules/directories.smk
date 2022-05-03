@@ -27,6 +27,9 @@ else:
   Kallisto_dir = config['Kallisto_dir']
 
 
+
+
+
 ### OUTPUT DIRs
 RESULTS = os.path.join(OUTPUT, 'RESULTS')
 WORKDIR = os.path.join(OUTPUT, 'PROCESSING')
@@ -52,6 +55,9 @@ if not os.path.exists(MULTIQC):
 # needs to be created before alignment
 if not os.path.exists(STAR_BAMS):
   os.makedirs(STAR_BAMS)
+# needs to be created for parse
+if not os.path.exists(WORKDIR):
+  os.makedirs(WORKDIR)
 # needs to be created for fastqc 
 if not os.path.exists(TMP):
   os.makedirs(TMP)
