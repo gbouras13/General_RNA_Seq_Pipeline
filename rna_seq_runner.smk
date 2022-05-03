@@ -1,10 +1,6 @@
 """
 The snakefile that runs the pipeline.
 # HPC
-# on login node from pipeline dir
-snakemake -s rna_seq_runner.smk -c 1 --use-conda --config Reads=Bams Output=test hg38_dir='/hpcfs/users/a1667917/STAR_Ref_Genomes' --conda-create-envs-only --conda-frontend conda
-# to run
-snakemake -s rna_seq_runner.smk --use-conda --config Reads=TCGA_RNA_Total_Bams/ Output=RNA_EGA_Out HG38_dir='/hpcfs/users/a1667917/STAR_Ref_Genomes' TCGA=True --profile wgs_tcga
 """
 
 

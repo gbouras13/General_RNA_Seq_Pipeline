@@ -24,6 +24,6 @@ cd $SNK_DIR
 module load Anaconda3/2020.07
 conda activate snakemake_clean_env
 
-snakemake -s rna_seq_runner.smk --use-conda --config ReadLength=200 Input=fastq Reads=/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/PRJNA523380/ Output=/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/PRJNA523380_Output/ --profile $PROF_DIR/wgs_tcga
+snakemake -s rna_seq_runner.smk --use-conda --config ReadLength=200 Input=fastq Reads=/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/PRJNA523380 Output=/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/PRJNA523380_Output --profile $PROF_DIR/wgs_tcga
 
 conda deactivate
