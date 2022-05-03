@@ -1,0 +1,23 @@
+
+##################
+# Run Parameters #
+##################
+
+# Database installation location, leave blank = use hecatomb install location
+
+Output:
+HG38_dir:
+ReadLength: 200
+Input: fastq
+Salmon_dir:
+Kallisto_dir:
+
+### STICK TO YOUR SYSTEM'S CPU:RAM RATIO FOR THESE
+BigJobMem: 150000     # Memory for MMSeqs in megabytes (e.g 64GB = 64000, recommend >= 64000)
+BigJobCpu: 64        # Threads for MMSeqs (recommend >= 16)
+BigJobTimeMin: 5760  # Max runtime in minutes for MMSeqs (this is only enforced by the Snakemake profile)
+MediumJobMem: 32000  # Memory for Megahit/Flye in megabytes (recommend >= 32000)
+MediumJobCpu: 16     # CPUs for Megahit/Flye in megabytes (recommend >= 16)
+SmallJobMem: 16000   # Memory for BBTools etc. in megabytes (recommend >= 16000)
+SmallJobCpu: 8       # CPUs for BBTools etc. (recommend >= 8)
+
