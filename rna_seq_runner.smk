@@ -44,7 +44,7 @@ include: "rules/targets.smk"
 
 if INPUT == 'fastq':
     include: "rules/fastq_parse_fastq.smk"
-else INPUT == 'bam':
+elif INPUT == 'bam':
     include: "rules/fastq_parse_bam.smk"
 
 include: "rules/qc.smk"
