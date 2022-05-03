@@ -35,7 +35,7 @@ def parseSamplesBam(readFileDir):
         sys.exit(1)
     if len(sampleDict.keys()) == 0:
         sys.stderr.write("\n"
-                         "    FATAL: We could not detect any samples at all.\n"
+                         "    FATAL: We could not detect any bam samples at all.\n"
                          "\n")
         sys.exit(1)
     return sampleDict
@@ -82,7 +82,7 @@ def parseSamplesFastq(readFileDir):
         sys.exit(1)
     if len(sampleDict.keys()) == 0:
         sys.stderr.write("\n"
-                         "    FATAL: We could not detect any samples at all.\n"
+                         "    FATAL: We could not detect any fastq samples at all.\n"
                          "\n")
         sys.exit(1)
     return sampleDict
