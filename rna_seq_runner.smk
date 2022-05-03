@@ -33,7 +33,7 @@ include: "rules/samples.smk"
 
 if INPUT == 'fastq':
     sampleReads = parseSamplesFastq(READS)
-else INPUT == 'bam':
+elif INPUT == 'bam':
     sampleReads = parseSamplesBam(READS)
 
 # samples

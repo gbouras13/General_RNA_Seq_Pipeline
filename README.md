@@ -18,7 +18,7 @@ snakemake -c 1 -s rules/Download_hg38.smk --config HG38_dir='/hpcfs/users/a16679
 
 2. Download the conda envs for offline use:
 ```console
-snakemake -c 1 -s rna_seq_runner.smk --use-conda --config Reads=Bams Output=test hg38_dir='/hpcfs/users/a1667917/STAR_Ref_Genomes' --conda-create-envs-only --conda-frontend conda
+snakemake -c 1 -s rna_seq_runner.smk --use-conda --config Input=fastq Output=test hg38_dir='/hpcfs/users/a1667917/STAR_Ref_Genomes' --conda-create-envs-only --conda-frontend conda
 ```
 
 3. The STAR indices need to be built - 200 (HiSeq 2000) read length index will be created (run on the compute node through slurm):
