@@ -18,7 +18,7 @@ snakemake -c 1 -s rules/Download_hg38.smk --config HG38_dir='/hpcfs/users/a16679
 
 2. Download the conda envs for offline use:
 ```console
-snakemake -c 1 -s rna_seq_runner.smk --use-conda --config Input=fastq Output=test hg38_dir='/hpcfs/users/a1667917/STAR_Ref_Genomes' --conda-create-envs-only --conda-frontend conda
+snakemake -c 1 -s rna_seq_runner.smk --use-conda --config ReadLength=200 Input=fastq Reads=/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/PRJNA453457/ Output=/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/PRJNA453457_Output/ --conda-create-envs-only --conda-frontend conda
 ```
 
 3. The STAR indices need to be built - 200 (HiSeq 2000) read length index will be created (run on the compute node through slurm):
@@ -41,7 +41,7 @@ snakemake -s rules/create_kallisto_indices.smk --use-conda --config Salmon_dir='
 5. Run the pipeline
 
 ```console
-snakemake -s rna_seq_runner.smk --use-conda --config Input={specify `fastq` or `bam`} Reads={reads_directory} Output={Output_directory} HG38_dir='/hpcfs/users/a1667917/STAR_Ref_Genomes' ReadLegnth=200 --profile wgs_tcga
+snakemake -s rna_seq_runner.smk --use-conda --config Input={specify `fastq` or `bam`} Reads={reads_directory} Output={Output_directory} ReadLength=200 --profile wgs_tcga
 ```
 
 * With a Slurm profile (see https://snakemake.readthedocs.io/en/stable/executing/cli.html https://github.com/Snakemake-Profiles/slurm https://fame.flinders.edu.au/blog/2021/08/02/snakemake-profiles-updated)
