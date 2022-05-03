@@ -9,9 +9,9 @@ rule copy_fastq:
     conda:
         os.path.join('..', 'envs','samtools.yaml')
     threads:
-        BigJobCpu
+        1
     resources:
-        mem_mb=BigJobMem
+        mem_mb=MediumJobMem
     shell:
         """
         cp {input[0]} > {output[0]}
