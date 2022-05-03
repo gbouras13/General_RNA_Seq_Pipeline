@@ -2,7 +2,7 @@ rule copy_fastq:
     """converted unmapped reads to fastq"""
     input:
         os.path.join(READS, "{sample}_1.fastq.gz"),
-        os.path.join(READS, "{sample}_1.fastq.gz")
+        os.path.join(READS, "{sample}_2.fastq.gz")
     output:
         os.path.join(TMP,"{sample}_R1.fastq.gz"),
         os.path.join(TMP,"{sample}_R2.fastq.gz")
