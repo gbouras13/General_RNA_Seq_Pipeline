@@ -74,7 +74,7 @@ def samplesFromDirectoryFastq(dir):
 def parseSamplesFastq(readFileDir):
     """Parse samples from a directory"""
     if os.path.isdir(readFileDir):
-        sampleDict = samplesFromDirectory(readFileDir)
+        sampleDict = samplesFromDirectoryFastq(readFileDir)
     else:
         sys.stderr.write("\n"
                          f"    FATAL: {readFileDir} is neither a file nor directory.\n"
