@@ -1,6 +1,4 @@
-
-rule 150align_star:
-    """align to hg38 150 """
+rule align_star_150:
     input:
         os.path.join(TMP,"{sample}_trim_R1.fastq.gz"),
         os.path.join(TMP,"{sample}_trim_R2.fastq.gz")
@@ -29,8 +27,7 @@ rule 150align_star:
             --outSAMtype BAM SortedByCoordinate
         """
 
-rule 200_align_star:
-    """align to hg38 200 """
+rule align_star_200:
     input:
         os.path.join(TMP,"{sample}_trim_R1.fastq.gz"),
         os.path.join(TMP,"{sample}_trim_R2.fastq.gz")
