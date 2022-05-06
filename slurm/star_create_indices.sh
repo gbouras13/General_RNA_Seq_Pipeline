@@ -16,7 +16,7 @@
 #SBATCH --mem=1GB                                             
 
 
-SNK_DIR="/hpcfs/users/a1667917/Kevin/RNA_Seq_Deconv_Pipeline"
+SNK_DIR="/hpcfs/users/a1667917/Kenny/RNA_Seq_SRA/General_RNA_Seq_Pipeline"
 PROF_DIR="/hpcfs/users/a1667917/snakemake_slurm_profile"
 
 cd $SNK_DIR
