@@ -8,7 +8,8 @@ rule align_star_150:
         os.path.join(LOGS,"{sample}_star.log")
     params:
         os.path.join(HG38_dir, 'hg38_150'),
-        os.path.join(STAR_BAMS,"{sample}_star_150_")
+        os.path.join(STAR_BAMS,"{sample}_star_150_"),
+        "150000000000"
     conda:
         os.path.join('..', 'envs','align.yaml')
     threads:
@@ -24,7 +25,8 @@ rule align_star_150:
             --readFilesCommand gunzip -c \
             --outFileNamePrefix {params[1]} \
             --quantMode TranscriptomeSAM \
-            --outSAMtype BAM SortedByCoordinate
+            --outSAMtype BAM SortedByCoordinate \
+            --limitBAMsortRAM {params[2]}
         """
 
 rule align_star_200:
