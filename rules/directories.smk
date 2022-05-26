@@ -4,6 +4,7 @@ Database and output locations for the pipeline
 
 
 DBDIR = 'Databases'
+TRUST4DIR = 'Trust_4_Files'
 
 ### OUTPUT DIRECTORY
 if config['Output'] is None:

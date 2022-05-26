@@ -47,6 +47,7 @@ include: "rules/qc.smk"
 include: "rules/align.smk"
 include: "rules/salmon_map.smk"
 include: "rules/kallisto_map.smk"
+include: "rules/receptor.smk"
 
 rule all:
     input:

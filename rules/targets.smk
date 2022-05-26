@@ -9,7 +9,8 @@ All target output files are declared here
 # Preprocessing files
 PreprocessingFiles = [
     os.path.join(LOGS, "fastq_parse.txt"),
-    os.path.join(LOGS,"aggr_qc.txt")
+    os.path.join(LOGS,"aggr_qc.txt"),
+    os.path.join(LOGS, "aggr_trust4.txt")
 ]
 
 if ReadLength == 150:
