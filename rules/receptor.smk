@@ -29,7 +29,7 @@ rule aggr_trust4:
     threads:
         1
     resources:
-        mem_mb=SmallJobMem
+        mem_mb=MediumJobMem
     shell:
         """
         touch {output[0]}
